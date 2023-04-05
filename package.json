@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.0",
+    "husk": "^0.5.3",
+    "husky": "^4.2.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r esm ./src/server.js",
+    "start": "node -r esm ./src/server.js",
+    "lint": "eslint \"src/**/*.{ts,js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,js,jsx}\" --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
